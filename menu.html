@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #272A2D;
+}
+h1{
+  position:absolute;
+  top:310px;
+  left:20px;
+  font-size: 50px;
+  font-family: 'Trebuchet MS', sans-serif;
+  color:white;
+}
+
+header {
+  background-image: url('https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg');
+  width: 100%;
+  height: 400px;
+  background-position: center center;
+  background-size: cover;
+}
+
+#sidenav a {
+  position: absolute;
+  left: -130px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 300px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#sidenav a:hover {
+  left: 0;
+}
+
+#home{
+  top: 420px;
+  background-color: #261005;
+}
+
+#menu{
+  top: 480px;
+  background-color: #442B19;
+}
+
+#contacts {
+  top: 540px;
+  background-color: #542516;
+}
+
+button{
+  position:absolute;
+  left:5px;
+  height:40px;
+  width:194px;
+  color:white;
+  background-color:#5D5D5D;
+  border:none;
+}
+
+button:hover{
+  background-color:#929292;
+}
+
+#coffee{
+  top:600px;
+}
+
+#tea{
+  top:640px;
+}
+
+#pasta{
+  top:680px;
+}
+
+#delight{
+  top:720px;
+}
+
+#coffees{
+  position:absolute;
+  top:360px;
+  left:350px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size:20px;
+  color: #F9FFB6;
+}
+
+#teas{
+  position:absolute;
+  top:360px;
+  left:350px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size:20px;
+  color: #F9FFB6;
+}
+
+#pastas{
+  position:absolute;
+  top:360px;
+  left:350px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size:20px;
+  color: #F9FFB6;
+}
+
+#delights{
+  position:absolute;
+  top:360px;
+  left:350px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size:20px;
+  color: #F9FFB6;
+}
+</style>
+<script>
+function coffee() {
+  var w = document.getElementById("delights");
+  var x = document.getElementById("coffees");
+  var y = document.getElementById("teas");
+  var z = document.getElementById("pastas")
+    w.style.display = "none";
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+  
+  document.getElementById("coffee").style.backgroundColor = '#442B19';
+  document.getElementById("tea").style.backgroundColor = '#5D5D5D';
+  document.getElementById("pasta").style.backgroundColor = '#5D5D5D';
+  document.getElementById("delight").style.backgroundColor = '#5D5D5D';
+}
+
+function tea() {
+  var w = document.getElementById("delights");
+  var x = document.getElementById("coffees");
+  var y = document.getElementById("teas");
+  var z = document.getElementById("pastas")
+    w.style.display = "none";
+    x.style.display = "none";
+    y.style.display = "block";
+    z.style.display = "none";
+  
+  document.getElementById("coffee").style.backgroundColor = '#5D5D5D';
+  document.getElementById("tea").style.backgroundColor = '#442B19';
+  document.getElementById("pasta").style.backgroundColor = '#5D5D5D';
+  document.getElementById("delight").style.backgroundColor = '#5D5D5D';
+}
+
+function pasta() {
+  var w = document.getElementById("delights");
+  var x = document.getElementById("coffees");
+  var y = document.getElementById("teas");
+  var z = document.getElementById("pastas")
+    w.style.display = "none";
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "block";
+
+  document.getElementById("coffee").style.backgroundColor = '#5D5D5D';
+  document.getElementById("tea").style.backgroundColor = '#5D5D5D';
+  document.getElementById("pasta").style.backgroundColor = '#442B19';
+  document.getElementById("delight").style.backgroundColor = '#5D5D5D';
+}
+
+function delight() {
+  var w = document.getElementById("delights");
+  var x = document.getElementById("coffees");
+  var y = document.getElementById("teas");
+  var z = document.getElementById("pastas");
+    w.style.display = "block";
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+  
+  document.getElementById("coffee").style.backgroundColor = '#5D5D5D';
+  document.getElementById("tea").style.backgroundColor = '#5D5D5D';
+  document.getElementById("pasta").style.backgroundColor = '#5D5D5D';
+  document.getElementById("delight").style.backgroundColor = '#442B19';
+}
+</script>
+<title>Menu</title>
+</head>
+<body>
+  <h1>MENU - Select a category</h1>
+      <header></header>
+      <div id = "sidenav">
+        <a href="home.html" id="home">HOME</a>
+        <a href="menu.html" id="menu">MENU</a>
+        <a href="contacts.html" id="contacts">CONTACTS</a>
+      </div>
+  
+  <button id = "coffee" onclick="coffee()">COFFEE</button>
+  <button id = "tea" onclick="tea()">TEA</button>
+  <button id = "pasta" onclick="pasta()">PASTA</button>
+  <button id = "delight" onclick="delight()">DELIGHTS</button>
+  
+  <div id = "coffees" style="display:none">
+    <table>
+    <tr>
+    <p style="text-decoration:underline;font-size:55px;">HOT</p>
+    <table>
+    <tr>
+    <td style ="text-align:center">
+    <img src="https://www.starbucksathome.com/za/sites/default/files/styles/nutrition_instruction_image/public/2021-06/BlackCoffee_LongShadow.png?itok=-QKql__F"style="height:100px;width:100px;"></img>
+  <p>Brewed Coffee<br><small>Php 65</small></p>
+    </td>
+    <td style="text-align:center;padding-left:160px;">
+    <img src="https://www.starbucks.com.au/_files/product-images/coffee-espresso/sbx20190617-35529-caffelatte-onwhite-corelib-srgb.png"style="height:100px;width:100px;"></img>
+  <p>Blonde Caffe Latte<br><small>Php 65</small></p>
+    </td>
+    </tr>
+  </table>
+</tr>
+<tr>
+  <p style="text-decoration:underline;font-size:55px;">COLD</p>
+    <table>
+    <tr>
+    <td style="text-align:center">
+    <img src="https://www.starbucks.com.au/imagecache/bestfit/620x634/_files/product-images/frapps/cream/sbx20190528-30305-doublechocolatychipcremefrapp-onwhite-corelib-srgb.png"style="height:140px;width:140px;"></img>
+  <p>Chocolate Frappucino<br><small>Php 120</small></p>
+    </td>
+    <td style="text-align:center;padding-left:90px;">
+    <img src="https://www.starbucks.com.au/imagecache/bestfit/620x634/_files/product-images/frapps/coffee/sbx20181113-21425-caramelfrapp-onwhite-corelib-srgb.png"style="height:140px;width:140px;"></img>
+  <p>Caramel Frappuccino<br><small>Php 120</small></p>
+</td>
+<td style="text-align:center;padding-left:90px;">
+  <img src ="https://images.squarespace-cdn.com/content/v1/5e855b7456183a37a5a5c942/1588462954870-0AOUV8XULYUIITP2NT0A/Dalgona+Coffee+cuttout.png" style="height:140px;width:90px;"></img>
+<p>Dalgona Coffee<br><small>Php 120</small></p>
+</td>
+</tr>
+</table>
+  </div>
+  <div id = "teas" style ="display:none">
+    <table>
+    <tr>
+    <p style="text-decoration:underline;font-size:55px;">HOT</p>
+    <table>
+    <tr>
+    <td style="text-align:center">
+    <img src="https://www.missmatchacafe.com/wp-content/uploads/2020/01/cafe2.png"style="height:100px;width:140px;"></img>
+      <p>Green Tea<br><small>Php 65</small></p>
+    </td>
+    <td style="text-align:center;padding-left:160px">
+    <img src="https://www.pngarts.com/files/13/White-Chamomile-PNG-Pic.png" style="height:100px;width:140px"></img><p>Chamomille Tea<br><small>Php 65</small></p>
+      </td>
+    </tr>
+  </table>
+</tr>
+<tr>
+  <p style="text-decoration:underline;font-size:55px;">COLD</p>
+    <table>
+    <tr>
+    <td style="text-align:center">
+    <img src="https://coco-tea.ph/wp-content/uploads/2019/01/Panda-Milk-Tea.png"style="height:140px;width:140px;"></img>
+      <p>Panda Milk Tea<br><small>Php 100</small></p>
+    </td>
+    <td style="text-align:center;padding-left:150px;">
+    <img src="https://coco-tea.ph/wp-content/uploads/2019/01/Panda-Matcha-Tea-Latte.png"style="height:140px;width:140px;"></img>
+  <p>Matcha Milk Tea<br><small>Php 110</small></p>
+</td>
+<td style="text-align:center;padding-left:150px;">
+  <img src ="https://coco-tea.ph/wp-content/uploads/2019/01/Passion-Fruit-Tea-Burst.png" style="height:140px;width:140px;"></img>
+<p>Fruit Tea<br><small>Php 120</small></p>
+</td>
+</tr>
+</table>
+
+
+  </div>
+  <div id = "pastas" style ="display:none">
+    <table>
+    <tr>
+    <p style="text-decoration:underline;font-size:55px;">PASTA</p>
+    <table>
+    <tr>
+    <td style="text-align:center">
+    <img src="https://nurishhplantbased.com/wp-content/uploads/2021/12/recipe-image-silo-penne-pasta-1.png"style="height:180px;width:200px;"></img>
+      <p style="padding-top:20px">Pesto<br><small>Php 170</small></p>
+    </td>
+    <td style="text-align:center;padding-left:160px">
+    <img src="https://wendys.megabots.app/assets/images/menu/1.png" style="height:200px;width:200px"></img><p>Spaghetti<br><small>Php 170</small></p>
+      </td>
+    </tr>
+  </table>
+</tr>
+<tr>
+    <table style = "padding-top:100px">
+    <tr>
+    <td style="text-align:center">
+    <img src="https://jow.com/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2F880x880%2Frecipes%2FL7ofF2mtFdcSgw.png&w=2560&q=100"style="height:200px;width:200px;"></img>
+      <p>Carbonara<br><small>Php 245</small></p>
+    </td>
+    <td style="text-align:center;padding-left:150px;">
+    <img src="https://jow.com/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2F880x880%2Frecipes%2FwzueuYkxZNvcRQ.png&w=2560&q=100"style="height:200px;width:200px;"></img>
+  <p>Shrimp Scampi<br><small>Php 260</small></p>
+</tr>
+</table>
+
+
+  </div>
+  <div id = "delights" style ="display:none">
+    <table>
+    <tr>
+    <p style="text-decoration:underline;font-size:55px;">DELIGHTS</p>
+    <table>
+    <tr>
+    <td style="text-align:center">
+    <img src="https://www.coeurdexocolat.com/media/ultimate%20brownie%20cutout.png"style="height:180px;width:140px;"></img>
+      <p style="padding-top:20px">Brownies<br><small>Php 200</small></p>
+    </td>
+    <td style="text-align:center;padding-left:160px">
+    <img src="https://images.squarespace-cdn.com/content/v1/538500e4e4b0fa9e95efc7b9/1666197565722-0DJ2RXBRW3THP75GAHM2/Coconut+Cream+CC+Slice.png" style="height:200px;width:200px"></img><p>Cheesecake<br><small>(Strawberry, Mango, Blueberry)<br>(Whole/slice) Php 699/Php129</small></p>
+      </td>
+    </tr>
+  </table>
+</tr>
+<tr>
+    <table style = "padding-top:100px">
+    <tr>
+    <td style="text-align:center">
+    <img src="https://cdn.shopify.com/s/files/1/0421/3378/2681/products/Ultimate-Chocolate-Cake_800x.png"style="height:200px;width:200px;"></img>
+      <p>Cake slice<br><small><br>(Chocolate,Strawberry,Mango)<br>Php 150</small></p>
+    </td>
+    <td style="text-align:center;padding-left:150px;">
+    <img src="https://crepestationlv.com/wp-content/uploads/2018/09/crepeSlider1.png"style="height:200px;width:200px"></img>
+  <p>Crepe<br><small>(Plain sauce, Nutty, Berry)<br>Php 169</small></p>
+</tr>
+</table>
+
+
+  </div>
+
+</body>
+</html>
